@@ -1,5 +1,20 @@
 package com.example.demo.dao;
 
-public class FakeStudentDao {
+import com.example.demo.model.Student;
+import java.util.List;
+import java.util.UUID;
 
+public class FakeStudentDao implements StudentDao{
+
+  private static List<Student> dataBase;
+
+  @Override
+  public List<Student> selectAllStudents() {
+    return dataBase;
+  }
+
+  @Override
+  public int insertStudent(UUID id, Student student) {
+    return 0;
+  }
 }
