@@ -33,4 +33,10 @@ public class StudentController {
     return "Added Student!";
   }
 
+  @PostMapping
+  public String updateStudent(@RequestBody  Student student) {
+    studentService.updateStudent(student);
+    return "Updated Student!";
+  }
+
 }
