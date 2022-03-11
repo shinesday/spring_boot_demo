@@ -6,6 +6,6 @@ import java.util.UUID;
 
 public interface StudentDao {
   List<Student> selectAllStudents();
-  int insertStudent(UUID id, Student student);
+  int insertStudent(Student student);
 
 }
