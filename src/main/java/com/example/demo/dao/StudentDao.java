@@ -10,5 +10,6 @@ public interface StudentDao {
   List<Student> selectAllStudents();
   int insertStudent(Student student);
   int updateStudent(Student student);
+  int deleteStudentById(UUID id);
 
 }

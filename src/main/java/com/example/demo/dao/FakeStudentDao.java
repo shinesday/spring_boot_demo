@@ -49,4 +49,14 @@ public class FakeStudentDao implements StudentDao{
     dataBase.set(indexToUpdate, student);
     return 1;
   }
+
+  @Override
+  public int deleteStudentById(UUID id) {
+    Optional<Student> optionalStudent = selectStudentById(id);
+    if (!optionalStudent.isPresent()) {
+      return -1;
+    }
+    dataBase.remove(optionalStudent.get());
+    return 1;
+  }
 }

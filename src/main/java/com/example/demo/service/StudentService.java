@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.dao.StudentDao;
 import com.example.demo.model.Student;
 import java.util.List;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -29,4 +30,7 @@ public class StudentService {
     return studentDao.updateStudent(student);
   }
 
+  public int deleteStudentById(UUID id) {
+    return studentDao.deleteStudentById(id);
+  }
 }
